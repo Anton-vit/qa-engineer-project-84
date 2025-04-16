@@ -251,8 +251,91 @@
   expected-result: |
     Поиск выводит на экран подробную информацию о товаре яйца сценой, размером скидки, остатком, категорией, кнопкой добавления в корзину
 
+# мобилка
+- summary: |
+    Проверка возможности просмотра сайта с устройства Android
+  requirement: |
+    - Сайт должен иметь мобильную версию
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открываем на мобильном устройстве Яндекс.Браузер
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
 
-    
+- summary: |
+    Проверка возможности просмотра сайта с устройства на iOs
+  requirement: |
+    - Сайт должен иметь мобильную версию
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открываем на мобильном устройстве приложение Safari
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
+
+# browsers
+- summary: |
+    Проверка возможности просмотра сайта через Яндекс.Браузер
+  requirement: |
+    - Сайт нужно протестировать на совместимость с последними версиями браузеров
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открыть Яндекс.Браузер
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
+
+- summary: |
+    Проверка возможности просмотра сайта через Google Chrome
+  requirement: |
+    - Сайт нужно протестировать на совместимость с последними версиями браузеров
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открыть Google Chrome
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
+
+- summary: |
+    Проверка возможности просмотра сайта через Opera GX
+  requirement: |
+    - Сайт нужно протестировать на совместимость с последними версиями браузеров
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открыть Opera GX
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
+
+- summary: |
+    Проверка возможности просмотра сайта через Microsoft Edge
+  requirement: |
+    - Сайт нужно протестировать на совместимость с последними версиями браузеров
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открыть Microsoft Edge
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
+
+- summary: |
+    Проверка возможности просмотра сайта через Mozilla
+  requirement: |
+    - Сайт нужно протестировать на совместимость с последними версиями браузеров
+  prerequisites: |
+  test-data: | 
+  steps:
+    - Открыть Mozilla
+    - В адресную строку вводим https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Открывается страница Hexlet Store
 
 
 
