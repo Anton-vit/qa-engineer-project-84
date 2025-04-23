@@ -1,1 +1,19 @@
+---
+- summary: |
+    Не работает поиск при слитном написании запроса
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+    Пролистать 4 страницы нажатием на кнопку "Следующая" до категории "smartphones"
+    В окне "поиск" ввести "iPhone6"
+  expected-result: |
+    Поиск выводит на экран товар с названием "iPhone 6"
+  actual-result: |
+    В результатах поиска выводится сообщение:"Nothing found!"
+
+
+
+
 
