@@ -13,7 +13,42 @@
   actual-result: |
     В результатах поиска выводится сообщение:"Nothing found!"
 
+- summary: |
+    Не работает поиск по ключевому слову на русском языке
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+    Пролистать 4 страницы нажатием на кнопку "Следующая" до категории "smartphones"
+    В окне "поиск" ввести "смартфон"
+  expected-result: |
+    Поиск выводит на экран все товары с описанием "smartphone"
+  actual-result: |
+    В результатах поиска выводится сообщение:"Nothing found!"
+
+- summary: |
+       Не работает поиск "iPhone" с главной (первой страницы) сайта
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+    В окне "Search" ввести "iphone"
+  expected-result: |
+    Поиск выводит на экран все товары с наименованием "iPhone"
+  actual-result: |
+    В результатах поиска выводится сообщение:"Nothing found!"
 
 
-
-
+ requirement: |
+    Пользователь должен иметь возможность искать товары по ключевому слову или категории
+  prerequisites: |
+    Открыта страница https://hexlet-products-store.vercel.app/
+    Английский язык интерфейса
+    Проставлена "галочка" в поле "In Stock"
+  test-data: |
+  steps:
+    - В окне "Search" ввести "iphone"
+  expected-result: |
+    Поиск выводит на экран все товары с наименованием "iPhone"
