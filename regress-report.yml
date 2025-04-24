@@ -101,7 +101,7 @@ test-cases:
 bugreports:
   
   - summary: |
-      Отсутствие возможно пролистать страницы
+      Отсутствие возможности пролистать страницы
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
       OC Windows 10 pro 22H2
@@ -110,7 +110,7 @@ bugreports:
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       Пролистать 4 страницы нажатием на кнопку "Следующая" до категории "smartphones"
     expected-result: |
-      Страница должна пролистаться до товаров категории "smartphones"
+      Страница пролистывается до товаров категории "smartphones"
     actual-result: |
       Пролистывается одна страница, затем предлагается перейти на предыдущую
   
@@ -136,7 +136,7 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      В левой части экрана под окном "Search" нажать на меню "Categories"
+      Нажать на меню "Categories"
       Выбрать их списка категорий категорию "motorcycle'
     expected-result: |
       Поиск выводит на экран все товары категории "motorcycle"
@@ -151,11 +151,9 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-
-      В левой части экрана убрать "галочку" в строке "В наличии"
+      Убрать "галочку" в строке "В наличии"
     expected-result: |
-      Пользователь должен увидеть товары которые есть в наличии и
-      которых нет в наличии
+      Пользователь должен увидеть товары которые есть в наличии и которых нет в наличии
     actual-result: |
       В результатах поиска отображаются только те товары, которых нет в наличии
   
@@ -169,8 +167,7 @@ bugreports:
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       Пролистать страницы нажатием на кнопку "Next"
     expected-result: >
-      Поиск выводит на экран "плитку" товаров с описанием, ценой,
-      ценой со скидкой, кнопкой добавления в корзину 
+      Поиск выводит на экран "плитку" товаров с описанием, ценой, ценой со скидкой, кнопкой добавления в корзину 
     actual-result: |
       В магазине осталось всего две страницы
  
