@@ -47,8 +47,8 @@
     OC Windows 10 pro 22H2
   steps-to-reproduce: |
     Открыть страницу https://hexlet-products-store.vercel.app/
-    В левой части экрана под окном "Search" нажать на меню "Categories"
-    Выбрать их списка категорий категорию "motorcycle'
+    Нажать на меню "Categories"
+    Выбрать категорию "motorcycle'
   expected-result: |
     Поиск выводит на экран все товары категории "motorcycle"
   actual-result: |
@@ -61,10 +61,9 @@
     OC Windows 10 pro 22H2
   steps-to-reproduce: |
      Открыть страницу https://hexlet-products-store.vercel.app/
-     В левой части экрана убрать "галочку" в строке "В наличии"
+     Убрать "галочку" в строке "В наличии"
   expected-result: |
-    Пользователь должен увидеть товары которые есть в наличии и
-    которых нет в наличии
+    Пользователь должен увидеть товары которые есть в наличии и которых нет в наличии
   actual-result: |
     В результатах поиска выводится сообщение:"Nothing found!"
 
@@ -75,7 +74,7 @@
     OC Windows 10 pro 22H2
   steps-to-reproduce: |
     Открыть страницу https://hexlet-products-store.vercel.app/ (открывается на английском языке)
-    Кликнуть на кнопке "Language" в правом верхнем углу
+    Кликнуть на кнопке "Language"
     В выпавшем окне кликнуть по значению "Russian"
   expected-result: |
     Интерфейс переключится на русский
@@ -89,8 +88,8 @@
     OC Windows 10 pro 22H2
   steps-to-reproduce: |
     В браузере открыть сайт http://adaptivator.ru/
-    В верхней части экрана в строку поиска ввести адрес https://hexlet-products-store.vercel.app/
-    Справа от строко поиска нажать кнопку "узнать"
+    В строку поиска ввести адрес https://hexlet-products-store.vercel.app/
+    Нажать кнопку "узнать"
     Просмотреть, как страница открывается на предложенных устройствах
   expected-result: |
     Приложение корректно отображается на выбранных устройствах
