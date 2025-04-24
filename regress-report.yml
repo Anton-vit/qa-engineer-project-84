@@ -97,7 +97,9 @@ test-cases:
   - summary: |
       Проверка доступности перевода сайта на русский язык
     status: pass
+
 bugreports:
+  
   - summary: |
       Отсутствие возможно пролистать страницы
     environment: |
@@ -106,12 +108,12 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-
       Пролистать 4 страницы нажатием на кнопку "Следующая" до категории "smartphones"
     expected-result: |
       Страница должна пролистаться до товаров категории "smartphones"
     actual-result: |
       Пролистывается одна страница, затем предлагается перейти на предыдущую
+  
   - summary: |
       Не работает поиск "iPhone" с главной (первой страницы) сайта
     environment: |
@@ -120,12 +122,12 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-
       В окне "Search" ввести "iphone"
     expected-result: |
       Поиск выводит на экран все товары с наименованием "iPhone"
     actual-result: |
       В результатах поиска выводится сообщение:"Nothing found!"
+  
   - summary: |
       Отсутствие возможности выбрать категорию товара 
     environment: |
@@ -134,14 +136,13 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-
       В левой части экрана под окном "Search" нажать на меню "Categories"
-
       Выбрать их списка категорий категорию "motorcycle'
     expected-result: |
       Поиск выводит на экран все товары категории "motorcycle"
     actual-result: |
       Данная категория не отображается в выпадающем списке
+  
   - summary: |
       Исчезание товаров при деактивации фильтра "в наличии"
     environment: |
@@ -157,6 +158,7 @@ bugreports:
       которых нет в наличии
     actual-result: |
       В результатах поиска отображаются только те товары, которых нет в наличии
+  
   - summary: |
       Пропали страницы с товарами
     environment: |
@@ -165,13 +167,13 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-
       Пролистать страницы нажатием на кнопку "Next"
     expected-result: >
       Поиск выводит на экран "плитку" товаров с описанием, ценой,
       ценой со скидкой, кнопкой добавления в корзину 
     actual-result: |
       В магазине осталось всего две страницы
+ 
   - summary: |
       Обрезка фотографий товара при просмотре со смартфона
     environment: |
@@ -184,6 +186,7 @@ bugreports:
       Фотографии товара открываются полностью
     actual-result: |
       Фотографии товара обрезаются сверху и снизу
+  
   - summary: |
       Обрезка фотографий товара при просмотре со смартфона
     environment: |
@@ -195,6 +198,7 @@ bugreports:
       Фотографии товара открываются полностью
     actual-result: |
       Фотографии товара обрезаются сверху и снизу
+  
   - summary: |
       Обрезка фотографий товара при просмотре с ПК
     environment: |
@@ -207,6 +211,7 @@ bugreports:
       Поиск выводит на экран "плитку" товаров с полным изображением товара
     actual-result: |
       Фотографии товара обрезаются сверху и снизу
+  
   - summary: |
       Не полное переключение интерфейса на русский язык
     environment: |
@@ -215,9 +220,7 @@ bugreports:
     steps-to-reproduce: >
       Открыть страницу https://hexlet-products-store.vercel.app/
       (открывается на английском языке)
-
       Кликнуть на кнопке "Language" в правом верхнем углу
-
       В выпавшем окне кликнуть по значению "Russian"
     expected-result: |
       Интерфейс переключится на русский
