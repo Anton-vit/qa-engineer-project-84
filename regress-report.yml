@@ -24,7 +24,7 @@ test-cases:
       Поиск товара по ключевому слову по включению
     status: fail
   
-  - summary: >
+  - summary: |
       Поиск товара "lipstick" по ключевому слову с главной (первой страницы)
       сайта
     status: pass
@@ -36,6 +36,7 @@ test-cases:
   - summary: |
       Поиск товара по категориям
     status: pass
+  
   - summary: |
       Поиск категории "motorcycle" с главной страницы экрана
     status: fail
