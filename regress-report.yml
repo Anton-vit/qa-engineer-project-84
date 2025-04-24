@@ -1,130 +1,226 @@
 ---
 test-cases:
-- summary: |
-    Поиск товара по ключевому слову
-  status: fail
+  - summary: |
+      Поиск товара по ключевому слову
+    status: fail
+  - summary: |
+      Поиск товара по ключевому слову с разным регистром
+    status: fail
+  - summary: |
+      Поиск товара по ключевому слову со слитным написанием
+    status: fail
+  - summary: |
+      Поиск товара по цифровому значению
+    status: fail
+  - summary: |
+      Поиск товара по ключевому слову на русском языке
+    status: fail
+  - summary: |
+      Поиск товара по ключевому слову по включению
+    status: fail
+  - summary: >
+      Поиск товара "lipstick" по ключевому слову с главной (первой страницы)
+      сайта
+    status: pass
+  - summary: |
+      Поиск "iPhone" с главной (первой страницы) сайта 
+    status: fail
+  - summary: |
+      Поиск товара по категориям
+    status: pass
+  - summary: |
+      Поиск категории "motorcycle" с главной страницы экрана
+    status: fail
+  - summary: |
+      Проверка фильтрации по бренду
+    status: pass
+  - summary: |
+      Проверка фильтрации по нескольким брендам
+    status: pass
+  - summary: |
+      Проверка фильтрации по наличию
+    status: fail
+  - summary: |
+      Проверка фильтрации по цене
+    status: pass
+  - summary: |
+      Проверка фильтрации по цене c буквенными значениями
+    status: pass
+  - summary: |
+      Проверка возможности просмотра товаров
+    status: fail
+  - summary: |
+      Проверка возможности просмотра подробной информации о товаре
+    status: pass
+  - summary: |
+      Проверка возможности просмотра сайта с устройства Android
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта с устройства на iOs
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта через Яндекс.Браузер
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта через Google Chrome
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта через Opera GX
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта через Microsoft Edge
+    status: fail
+  - summary: |
+      Проверка возможности просмотра сайта через Mozilla
+    status: fail
+  - summary: |
+      Проверка добавления товара в корзину 
+    status: pass
+  - summary: |
+      Проверка добавления товара в корзину
+    status: pass
+  - summary: |
+      Проверка удаления товара из корзины
+    status: pass
+  - summary: |
+      Проверка очистки корзины
+    status: pass
+  - summary: |
+      Проверка переключения языка интерфейса Русский на English
+    status: pass
+  - summary: |
+      Проверка переключения языка интерфейса c English на Русский
+    status: fail
+  - summary: |
+      Проверка доступности сайта на различных устройствах
+    status: fail
+  - summary: |
+      Проверка доступности перевода сайта на русский язык
+    status: pass
+bugreports:
+  - summary: |
+      Отсутствие возможно пролистать страницы
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
 
-- summary: |
-    Поиск товара по ключевому слову с разным регистром
-  status: fail
+      Пролистать 4 страницы нажатием на кнопку "Следующая" до категории "smartphones"
+    expected-result: |
+      Страница должна пролистаться до товаров категории "smartphones"
+    actual-result: |
+      Пролистывается одна страница, затем предлагается перейти на предыдущую
+  - summary: |
+      Не работает поиск "iPhone" с главной (первой страницы) сайта
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
 
-- summary: |
-    Поиск товара по ключевому слову со слитным написанием
-  status: fail
+      В окне "Search" ввести "iphone"
+    expected-result: |
+      Поиск выводит на экран все товары с наименованием "iPhone"
+    actual-result: |
+      В результатах поиска выводится сообщение:"Nothing found!"
+  - summary: |
+      Отсутствие возможности выбрать категорию товара 
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
 
-- summary: |
-    Поиск товара по цифровому значению
-  status: fail
+      В левой части экрана под окном "Search" нажать на меню "Categories"
 
-- summary: |
-    Поиск товара по ключевому слову на русском языке
-  status: fail
+      Выбрать их списка категорий категорию "motorcycle'
+    expected-result: |
+      Поиск выводит на экран все товары категории "motorcycle"
+    actual-result: |
+      Данная категория не отображается в выпадающем списке
+  - summary: |
+      Исчезание товаров при деактивации фильтра "в наличии"
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
 
-- summary: |
-    Поиск товара по ключевому слову по включению
-  status: fail
+      В левой части экрана убрать "галочку" в строке "В наличии"
+    expected-result: |
+      Пользователь должен увидеть товары которые есть в наличии и
+      которых нет в наличии
+    actual-result: |
+      В результатах поиска отображаются только те товары, которых нет в наличии
+  - summary: |
+      Пропали страницы с товарами
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
 
-- summary: |
-    Поиск товара "lipstick" по ключевому слову с главной (первой страницы) сайта
-  status: pass
+      Пролистать страницы нажатием на кнопку "Next"
+    expected-result: >
+      Поиск выводит на экран "плитку" товаров с описанием, ценой,
+      ценой со скидкой, кнопкой добавления в корзину 
+    actual-result: |
+      В магазине осталось всего две страницы
+  - summary: |
+      Обрезка фотографий товара при просмотре со смартфона
+    environment: |
+      Смартфон Infinix Note 40
+      Android 14
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    expected-result: |
+      Фотографии товара открываются полностью
+    actual-result: |
+      Фотографии товара обрезаются сверху и снизу
+  - summary: |
+      Обрезка фотографий товара при просмотре со смартфона
+    environment: |
+      Смартфон Iphone 16 pro
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    expected-result: |
+      Фотографии товара открываются полностью
+    actual-result: |
+      Фотографии товара обрезаются сверху и снизу
+  - summary: |
+      Обрезка фотографий товара при просмотре с ПК
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    expected-result: |
+      Поиск выводит на экран "плитку" товаров с полным изображением товара
+    actual-result: |
+      Фотографии товара обрезаются сверху и снизу
+  - summary: |
+      Не полное переключение интерфейса на русский язык
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: >
+      Открыть страницу https://hexlet-products-store.vercel.app/
+      (открывается на английском языке)
 
-- summary: |
-    Поиск "iPhone" с главной (первой страницы) сайта 
-  status: fail
+      Кликнуть на кнопке "Language" в правом верхнем углу
 
-- summary: |
-    Поиск товара по категориям
-  status: pass
-
-- summary: |
-    Поиск категории "motorcycle" с главной страницы экрана
-  status: fail
-
-- summary: |
-    Проверка фильтрации по бренду
-  status: pass
-
-- summary: |
-    Проверка фильтрации по нескольким брендам
-  status: pass
-
-- summary: |
-    Проверка фильрации по наличию
-  status: fail
-
-- summary: |
-    Проверка фильтрации по цене
-  status: pass
-
-- summary: |
-    Проверка фильтрации по цене c буквенными значениями
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра товаров
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра подробной информации о товаре
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта с устройства Android
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта с устройства на iOs
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта через Яндекс.Браузер
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта через Google Chrome
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта через Opera GX
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта через Microsoft Edge
-  status: pass
-
-- summary: |
-    Проверка возможности просмотра сайта через Mozilla
-  status: pass
-
-- summary: |
-    Проверка добавления товара в корзину 
-  status: pass
-
-- summary: |
-    Проверка добавления товара в корзину
-  status: pass
-
-- summary: |
-    Проверка удаления товара из корзины
-  status: pass
-
-- summary: |
-    Проверка очистки корзины
-  status: pass
-
-- summary: |
-    Проверка переключения языка интерфейса Русский на English
-  status: pass
-
-- summary: |
-    Проверка переключения языка интерфейса c English на Русский
-  status: fail
-
-- summary: |
-    Проверка доступности сайта на различных устройствах
-  status: fail
-
-- summary: |
-    Проверка доступности перевода сайта на русский язык
-  status: pass
-
+      В выпавшем окне кликнуть по значению "Russian"
+    expected-result: |
+      Интерфейс переключится на русский
+    actual-result: >
+      Карточки товаров с описанием, категории, названия остались на
+      английском языке
