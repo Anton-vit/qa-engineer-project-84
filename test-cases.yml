@@ -30,7 +30,7 @@
     - В окне "поиск" ввести "iPhOnE 6"
   expected-result: |
     Поиск выводит на экран товар с названием "iPhone 6"
-
+    
 - summary: |
     Поиск товара по ключевому слову со слитным написанием
   requirement: |
@@ -157,7 +157,6 @@
   expected-result: |
     Поиск выводит на экран все товары категории "motorcycle"
 
- # 2
 - summary: |
     Проверка фильтрации по бренду
   requirement: |
@@ -179,7 +178,8 @@
   prerequisites: |
     Открыта страница https://hexlet-products-store.vercel.app/
     Русский язык интерфейса Проставлена "галочка" в поле "В наличии"
-  test-data: ""
+  test-data: |
+    ""
   steps:
     - Слева от названия производителя Dior проставить
       "галочку"
@@ -198,7 +198,8 @@
     Открыта страница https://hexlet-products-store.vercel.app/
     Русский язык интерфейса 
     Проставлена "галочка" в поле "В наличии"
-  test-data: ""
+  test-data: |
+    ""
   steps:
     - Убрать "галочку" в строке "В наличии"
   expected-result: |
@@ -213,7 +214,8 @@
     Открыта страница https://hexlet-products-store.vercel.app/
     Русский язык интерфейса 
     Проставлена "галочка" в поле "В наличии"
-  test-data: ""
+  test-data: |
+    ""
   steps:
     - В поле "Цена от" указать 0,1
     - В поле "Цена до" указать 10.5
@@ -227,7 +229,8 @@
   prerequisites: Открыта страница https://hexlet-products-store.vercel.app/
     Русский язык интерфейса 
     Проставлена "галочка" в поле "В наличии"
-  test-data: ""
+  test-data: |
+    ""
   steps:
     - В поле "Цена" ввести буквы на латинице или кирилице
   expected-result: |
@@ -272,6 +275,7 @@
   requirement: |
     - Сайт должен иметь мобильную версию
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
@@ -285,6 +289,7 @@
   requirement: |
     - Сайт должен иметь мобильную версию
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
@@ -298,6 +303,7 @@
   requirement: |
     - Сайт нужно протестировать на совместимость с последними версиями браузеров
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
@@ -310,7 +316,8 @@
     Проверка возможности просмотра сайта через Google Chrome
   requirement: |
     - Сайт нужно протестировать на совместимость с последними версиями браузеров
-  prerequisites: |
+  prerequisites: |.
+    ""
   test-data: | 
     ""
   steps:
@@ -324,6 +331,7 @@
   requirement: |
     - Сайт нужно протестировать на совместимость с последними версиями браузеров
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
@@ -337,6 +345,7 @@
   requirement: |
     - Сайт нужно протестировать на совместимость с последними версиями браузеров
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
@@ -350,6 +359,7 @@
   requirement: |
     - Сайт нужно протестировать на совместимость с последними версиями браузеров
   prerequisites: |
+    ""
   test-data: | 
     ""
   steps:
