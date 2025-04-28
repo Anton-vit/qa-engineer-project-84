@@ -1,6 +1,23 @@
 ---
 test-cases:
   - summary: |
+      Текст без ошибок грамматики и орфографии на русском языке
+    status: pass
+
+  - summary: |
+      Текст без ошибок грамматики и орфографии на английском языке
+    status: pass
+
+  - summary: |
+      Элементы страницы выглядят ровно
+    status: fail
+
+  - summary: |
+      Элементы страницы выглядят ровно при переключении языка интерфейса
+    status: fail
+
+      
+  - summary: |
       Поиск товара по ключевому слову
     status: fail
   
@@ -134,6 +151,19 @@ test-cases:
     status: pass
 
 bugreports:
+  - summary: |
+      Поехала вёрстка
+    environment: |
+      Яндекс Браузер Версия 25.2.6.697 (64-bit)
+      OC Windows 10 pro 22H2
+    steps-to-reproduce: |
+      Открыть страницу https://hexlet-products-store.vercel.app/
+    expected-result: |
+      Вёрстка в порядке
+    actual-result: |
+      Поехала вёрстка (Скриншот 1)
+
+
   
   - summary: |
       Отсутствие возможности пролистать страницы
