@@ -1,5 +1,62 @@
 ---
 - summary: |
+    Поехала вёрстка
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Вёрстка в порядке
+  actual-result: |
+    Поехала вёрстка (Скриншот 1)
+
+- summary: |
+    Поехала вёрстка  при переключении языка интерфейса
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+    Переключить язык интерфейса с русского на английский
+  expected-result: |
+    Кнопки "Add To Cart" остаются неизменными
+  actual-result: |
+    Поехала вёрстка кнопок "Add To Cart" (Скриншот 2)
+
+- summary: |
+    Ошибка отображения иконки языка интерфейса
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+    Кликнуть кнопку переключения языка 
+  expected-result: |
+    Выпадает вкладка выбора языка формата: иконка флага/язык интерфейса
+  actual-result: |
+    Не отображается иконка английского языка интерфейса (Скриншот 3)
+
+- summary: |
+    Все фотографии товаров выполнены в едином стиле
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу https://hexlet-products-store.vercel.app/
+  expected-result: |
+    Все фотографии одного размера (нет слишком маленьких или больших), выполнены в одном дизайне, нет рамок, один цветовой фон
+  actual-result: |
+    Некоторые фотографии имеют рамки по бокам (Скриншот 4)
+
+
+
+
+
+
+
+
+- summary: |
     Не работает поиск при слитном написании запроса
   environment: |
     Яндекс Браузер Версия 25.2.6.697 (64-bit)
