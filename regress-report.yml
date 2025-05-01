@@ -174,7 +174,7 @@ bugreports:
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
       OC Windows 10 pro 22H2
-    steps-to-reproduce: >
+    steps-to-reproduce: |
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     expected-result: |
@@ -187,7 +187,7 @@ bugreports:
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
       OC Windows 10 pro 22H2
-    steps-to-reproduce: >
+    steps-to-reproduce: |
       Открыть страницу
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     expected-result: |
@@ -214,10 +214,10 @@ bugreports:
       OC Windows 10 pro 22H2
     steps-to-reproduce: |
       Открыть страницу https://hexlet-products-store.vercel.app/
-    expected-result: >
+    expected-result: |
       Все фотографии одного размера (нет слишком маленьких или
       больших), выполнены в одном дизайне, нет рамок, один цветовой фон
-    actual-result: >
+    actual-result: |
       Некоторые фотографии имеют рамки по бокам, фотографии товара
       обрезаны (Скриншот 19)
   
