@@ -231,84 +231,84 @@ bugreports:
   actual-result: |
     Отображается главная страница сайта (Скриншот 27)
 
-  - summary: |
-      Не корректный поиск по цене при выборе нескольких опций фильтрации
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      Выбрать категорию fragrances
-      Выбрать бренды Calvin Klein, Chanel, Dior, Gucci
-      В фильтре по цене указать от 70 до 100 $
-      Проставить галочку в поле "В наличии"
-    expected-result: |
-      Отобразяться товары по цене от 70 до 100 $
-    actual-result: |
-      Отобразился товар с ценой менее 70 $ (Скриншот 33)
+- summary: |
+    Не корректный поиск по цене при выборе нескольких опций фильтрации
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Выбрать категорию fragrances
+    Выбрать бренды Calvin Klein, Chanel, Dior, Gucci
+    В фильтре по цене указать от 70 до 100 $
+    Проставить галочку в поле "В наличии"
+  expected-result: |
+    Отобразяться товары по цене от 70 до 100 $
+  actual-result: |
+    Отобразился товар с ценой менее 70 $ (Скриншот 33)
 
 - summary: |
-      Не корректная фильтрация цены от большей к меньшей
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      В фильтре по цене указать от 20 до 10 $
-    expected-result: |
-      Поиск выдаст результат "Nothing found!"
-    actual-result: |
-      Отобразились все товары страницы (Скриншот 34)
+    Не корректная фильтрация цены от большей к меньшей
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    В фильтре по цене указать от 20 до 10 $
+  expected-result: |
+    Поиск выдаст результат "Nothing found!"
+  actual-result: |
+    Отобразились все товары страницы (Скриншот 34)
 
-  - summary: |
-      Отсутствует сообщение "Nothing found"      
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      В окне поиск ввести название не существующего товара (например jdkv vjd) 
-    expected-result: |
-      Поиск выдаст сообщение "Nothing found"
-    actual-result: |
-      Поиск перестал выдавать значение Nothing found  (Скриншот 23)
+- summary: |
+    Отсутствует сообщение "Nothing found"      
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    В окне поиск ввести название не существующего товара (например jdkv vjd) 
+  expected-result: |
+    Поиск выдаст сообщение "Nothing found"
+  actual-result: |
+    Поиск перестал выдавать значение Nothing found  (Скриншот 23)
   
-  - summary: |
-      Кнопки добавления в корзину разного размера
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      Открыть страницу
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    expected-result: |
-      Вёрстка в порядке
-    actual-result: |
-      Поехала верстка  (Скриншот 16)
+- summary: |
+    Кнопки добавления в корзину разного размера
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу
+    https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+  expected-result: |
+    Вёрстка в порядке
+  actual-result: |
+    Поехала верстка  (Скриншот 16)
   
-  - summary: |
-      При переключении интерфейса на русский язык плывет верстка
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      Открыть страницу
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    expected-result: |
-      Вёрстка в порядке
-    actual-result: |
-      Поехала верстка  (Скриншот 17)
+- summary: |
+    При переключении интерфейса на русский язык плывет верстка
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Открыть страницу
+    https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+  expected-result: |
+    Вёрстка в порядке
+  actual-result: |
+    Поехала верстка  (Скриншот 17)
   
-  - summary: |
-      Ошибка отображения иконки языка интерфейса
-    environment: |
-      Яндекс Браузер Версия 25.2.6.697 (64-bit)
-      OC Windows 10 pro 22H2
-    steps-to-reproduce: |
-      Кликнуть кнопку переключения языка 
-    expected-result: |
-      Выпадает вкладка выбора языка формата: иконка флага/язык интерфейса
-    actual-result: |
-      Не отображается иконки языков интерфейса (Скриншот 18)
+- summary: |
+    Ошибка отображения иконки языка интерфейса
+  environment: |
+    Яндекс Браузер Версия 25.2.6.697 (64-bit)
+    OC Windows 10 pro 22H2
+  steps-to-reproduce: |
+    Кликнуть кнопку переключения языка 
+  expected-result: |
+    Выпадает вкладка выбора языка формата: иконка флага/язык интерфейса
+  actual-result: |
+    Не отображается иконки языков интерфейса (Скриншот 18)
  
-  - summary: |
+- summary: |
       Фотографии выполнены не в одном стиле
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
@@ -322,7 +322,7 @@ bugreports:
       Некоторые фотографии имеют рамки по бокам, фотографии товара
       обрезаны (Скриншот 19)
   
-  - summary: |
+- summary: |
       Кнопка закрытия не реагирует на нажатие
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
@@ -337,7 +337,7 @@ bugreports:
     actual-result: |
       Кнопка закрытия не реагирует на нажатие (Скриншот 20)
 
-  - summary: |
+- summary: |
       Плывет верстка в мобильной версии сайта
     environment: |
       iPhone 13 Pro OC: iOS 18.3.2 Safari 18.3.2 
@@ -349,7 +349,7 @@ bugreports:
     actual-result: |
       Верстка плывет, фотографии товара обрезаются (Скриншот 30)
   
-  - summary: |
+- summary: |
       Не полное переключение интерфейса на русский язык
     environment: |
       Яндекс Браузер Версия 25.2.6.697 (64-bit)
