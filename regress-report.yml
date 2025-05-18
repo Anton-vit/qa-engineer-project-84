@@ -1,6 +1,6 @@
 ---
 test-cases:
-  - summary: |
+- summary: |
     Поиск товара по ключевому слову
   status: fail
 
